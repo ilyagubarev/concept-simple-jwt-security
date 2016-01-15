@@ -7,7 +7,6 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -23,7 +22,6 @@ public class SupplierUserEntity extends UserEntity {
     @Column(name = "manager_enabled")
     private boolean managerEnabled;
 
-    @ManyToOne
     @Column(name = "company_id")
     private SupplierCompanyEntity company;
 
