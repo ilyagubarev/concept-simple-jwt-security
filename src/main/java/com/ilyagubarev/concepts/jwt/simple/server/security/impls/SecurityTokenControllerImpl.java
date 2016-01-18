@@ -1,5 +1,8 @@
-package com.ilyagubarev.concepts.jwt.simple.server.security;
+package com.ilyagubarev.concepts.jwt.simple.server.security.impls;
 
+import com.ilyagubarev.concepts.jwt.simple.server.security.SecurityTokenService;
+import com.ilyagubarev.concepts.jwt.simple.server.security.UserAuthenticationService;
+import com.ilyagubarev.concepts.jwt.simple.server.security.UserCredentials;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/authentication/tokens")
-public class SecurityTokenController {
+public class SecurityTokenControllerImpl {
 
     @Autowired
     private SecurityTokenService tokens;
