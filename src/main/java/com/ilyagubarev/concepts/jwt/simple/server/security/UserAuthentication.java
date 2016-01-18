@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import java.util.Set;
 import java.util.UUID;
+import java.time.Instant;
 
 public class UserAuthentication implements Serializable {
 
@@ -11,6 +12,7 @@ public class UserAuthentication implements Serializable {
     private String passwordHash;
     private String companyType;
     private Set<String> roles;
+    private Instant authenticated;
 
     public UUID getId() {
         return id;
@@ -42,5 +44,13 @@ public class UserAuthentication implements Serializable {
 
     public void setRoles(Set<String> roles) {
         this.roles = roles;
+    }
+
+    public Instant getAuthenticated() {
+        return authenticated;
+    }
+
+    public void setAuthenticated(Instant authenticated) {
+        this.authenticated = authenticated;
     }
 }

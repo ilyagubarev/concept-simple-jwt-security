@@ -17,7 +17,7 @@ public class SecurityTokenController {
     private UserAuthenticationService users;
 
     @RequestMapping(method = RequestMethod.POST)
-    public String create(@RequestBody(required = true) UserCredentials credentials) {
-        return tokens.create(users.authenticate(credentials));
+    public void create(@RequestBody(required = true) UserCredentials credentials) {
+        throw new UnsupportedOperationException();
     }
 }
