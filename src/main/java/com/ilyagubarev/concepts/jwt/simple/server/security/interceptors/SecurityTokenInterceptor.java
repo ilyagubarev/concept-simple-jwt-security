@@ -13,10 +13,14 @@ import com.ilyagubarev.concepts.jwt.simple.server.security.SecurityContext;
 import com.ilyagubarev.concepts.jwt.simple.server.security.SecurityToken;
 import com.ilyagubarev.concepts.jwt.simple.server.security.SecurityTokenService;
 import com.ilyagubarev.concepts.jwt.simple.server.security.UserAuthentication;
+import org.springframework.beans.factory.annotation.Value;
 
 public class SecurityTokenInterceptor extends HandlerInterceptorAdapter {
 
     private static final String SECURITY_TOKEN_HEADER = "X-Auth-Header";
+
+    @Value("${security.token.header}")
+    private String securityTokenHeader;
 
     @Autowired
     private SecurityContext context;
