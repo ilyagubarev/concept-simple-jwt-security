@@ -9,8 +9,9 @@ import com.ilyagubarev.concepts.jwt.simple.server.security.SecurityTokenService;
 import com.ilyagubarev.concepts.jwt.simple.server.security.UserAuthentication;
 import io.jsonwebtoken.Claims;
 import java.time.Instant;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class JwtSecurityTokenService implements SecurityTokenService {
 
     private static final ObjectMapper MAPPER = new ObjectMapper();

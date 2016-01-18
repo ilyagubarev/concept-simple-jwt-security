@@ -11,7 +11,9 @@ import com.ilyagubarev.concepts.jwt.simple.server.security.UserAuthentication;
 import com.ilyagubarev.concepts.jwt.simple.server.security.UserAuthenticationService;
 import com.ilyagubarev.concepts.jwt.simple.server.security.UserCredentials;
 import com.ilyagubarev.concepts.jwt.simple.server.security.UserPasswordHashFactory;
+import org.springframework.stereotype.Service;
 
+@Service
 public class DefaultUserAuthenticationService implements UserAuthenticationService {
 
     @Autowired

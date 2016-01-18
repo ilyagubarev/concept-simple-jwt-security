@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Table(name = "consumer_companies")
 public class ConsumerCompanyEntity extends CompanyEntity {
 
-    @OneToMany(mappedBy = "employees")
+    @OneToMany(mappedBy = "company")
     private Collection<ConsumerUserEntity> employees;
 
     @Override
